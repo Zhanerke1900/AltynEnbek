@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    background-image: url('img/fonn.jpg');
+    background-image: url('fonn.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@
     width: 100vw;
     min-height: 300px; /* Вместо height, чтоб не обрезало */
     position: relative;
-    background: url('img/fon2.jpg') no-repeat center center / cover;
+    background: url('fon2.jpg') no-repeat center center / cover;
     padding: 40px 20px;
     color: #fff;
     overflow: hidden;
@@ -213,7 +213,7 @@
 
 
   .top-form1 {
-    background: url('img/кольцо.jpg') no-repeat center center/cover;
+    background: url('кольцо.jpg') no-repeat center center/cover;
     padding: 60px 20px;
     color: #fff;
     position: relative;
