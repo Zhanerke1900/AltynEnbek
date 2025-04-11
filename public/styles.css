@@ -1,0 +1,844 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
+    min-height: 800vh;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; 
+    color: #ffffff;
+    font-size: 15px;
+}
+
+header {
+    margin-top: 85px;  /* Опускает текст вниз */
+    margin-left: 500px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Центрируем меню */
+    gap: 10px; /* Регулируем расстояние между пунктами */
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+     margin: 0 15px;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+nav ul li a:hover {
+    color: yellow;
+}
+
+
+section {
+    padding: 220px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute; /* Фиксируем позицию */
+    top: 0; /* Отступ сверху */
+    left: 170px; /* Отступ слева */
+    width: 170px; /* Размер логотипа */
+    z-index: 1000; 
+}
+
+.yellow-bar {
+    background: yellow;
+    height: 1px; /* Измени при необходимости */
+    width: 100%; /* Растягивает линию на всю ширину экрана */
+    position: absolute;
+    top: 150px; /* Опусти линию немного вниз */
+    left: 0;
+}
+
+
+#contact {
+    background: white;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 30px;
+    
+}
+
+button {
+    background: rgb(235, 255, 15);
+    color: rgb(0, 0, 0);
+    padding: 10px 45px;
+    border: 2px solid rgb(235, 255, 15);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-color:rgb(235, 255, 15);
+    text-transform: uppercase; 
+    text-decoration: none;
+}
+
+button:hover {
+    background: #005bb500;
+    border: 2px solid rgb(235, 255, 15);
+    border-color: rgb(235, 255, 15);
+    color: white;
+}
+
+#submit{
+    background-color: rgb(85, 138, 202);
+    color:#fff;
+    padding: 10px 15px;
+    font-size: 12px;
+    border-color:rgb(82, 134, 197);
+    border-radius: 5px;
+    text-transform:none;
+    position: absolute;
+    left:20px;
+    bottom:20px;
+}
+#submit:hover{
+    background-color: rgb(50, 94, 148);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    color: white;
+   
+}
+
+nav a { margin: 0; text-decoration: none; color: rgb(255, 255, 255); }
+
+h1#title {
+    font-size: 33px; /* Увеличенный размер шрифта */
+    color: white; /* Белый цвет текста */
+    text-align: center; /* Центрирование */
+    margin-top: 0; /* Отступ сверху, чтобы не наезжало на меню */
+    line-height: 1.3; /* Межстрочный интервал */
+    max-width: 750px; /* Ограничиваем ширину */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.index::before {
+    content: "";  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../img/pic1.jpg'); 
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    z-index: -1; 
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end; /* Прижимаем кнопки к правому краю */
+        align-items: center; 
+    position: absolute; /* Или relative, если нужно */
+    top: 0; /* Поднимаем вверх */
+    right: 30px;
+    width: 100%;
+    text-transform: lowercase; 
+    padding: 10px 20px;
+    
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+.phone-btn, .email-btn {
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    background-color: rgb(229, 255, 0);
+}
+
+.phone-btn:hover, .email-btn:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px; /* Толщина подчеркивания */
+    text-underline-offset: 1px;
+}
+
+.language-switcher {
+    display: flex;
+    flex-direction: column; /* Флаги вертикально */
+    align-items: center;
+    margin-left: 150px;
+}
+
+.language-switcher img {
+    width: 25px;
+    margin-bottom: 5px; /* Отступ между флагами */
+    transition: 0.3s;
+}
+
+.language-switcher img:hover {
+    transform: scale(1.1);
+}
+
+
+
+.button-image {
+    width: 350px; /* Размер кнопки */
+    height: auto;
+    border: none;
+    bottom:0%;
+    right:0%;
+    position:absolute;
+    cursor: pointer;
+}
+
+#redirectButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#redirectButton:hover .button-image {
+    opacity: 0.8;
+}
+
+
+
+
+
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    justify-content: center;
+    align-items: left;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 550px;
+    height: 150px;
+    border-radius: 5px;
+    text-align: left;
+    color: rgb(49, 49, 49);
+    position: fixed;
+    top:30px;
+    align-items: left;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-content h2 {
+    font-size: 15px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    text-align: left; /* Выравнивание по центру */
+    color: #4e4e4e; /* Цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
+    margin-top: 0;
+    text-transform: uppercase; /* Все буквы заглавные */
+}
+.modal-content input {
+    display: block; /* Каждый input занимает всю ширину */
+    width: 100%; /* Растягиваем на всю ширину */
+    margin-bottom: 15px; /* Добавляем отступ между полями */
+
+}
+
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1150px;
+    margin: auto;
+    position: relative;
+    
+}
+
+.service {
+    position: relative;
+    overflow: hidden;
+    margin: 4px;
+    background: #000;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    display: block;
+  
+}
+
+.service-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.service-content .caption {
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+
+.service-1 {
+    width: 100%;
+}
+
+.service-2 {
+    width: 66%;
+    height: auto;
+    position: relative;
+}
+
+.service-2 .service-content {
+    right: 20px;
+    left: auto;
+    text-align: right;
+}
+
+.service-3 {
+    width: 66%;
+    height: auto;
+    position: relative;
+}
+.service-3 .service-content {
+    right: 20px;
+    left: auto;
+    text-align: right;
+}
+
+.service-4 {
+    width: 386.5px;/* Сделать картинку меньше */
+    height: 614.5px;
+    position: absolute;
+    right:-4px;
+    margin:0;
+    top: 353.5px;
+
+
+}
+.service-4 .service-content {
+    top:40%;
+    text-align: center;
+    left:0;
+}
+
+.service-5 {
+    width: 372px;
+    height: 634px;
+    position: relative;
+}
+.service-5 .service-content {
+    text-align: center;
+    top:40%;
+    left:0;
+    line-height: 1.2;
+}
+.big-text {
+    font-size: 60px; /* Или любое другое значение */
+    font-weight: bold;
+}
+
+
+.service-6 {
+    width: 382.5px;
+    height: auto;
+    position: absolute;
+    left:380.5px;
+    margin:0;
+    top: 972px;
+  
+}
+.service-6 .service-content {
+    text-align: left;
+    top: 20px;
+    font-size:25px;
+}
+
+
+.service-7 {
+    width: 386.5px;
+    height: 317.5px;
+    position: absolute;
+    right:-4px;
+    margin:0;
+    top: 972px;
+  
+}
+.service-7 .service-content {
+    text-align: right;
+    top: 20px;
+    right: 30px;
+    font-size:25px;
+}
+
+
+
+.service-8 {
+    width: 382.5px;
+    height: 312px;
+    position: absolute;
+    left:380.5px;
+    margin:0;
+    top: 1293.5px;
+  
+}
+.service-8 .service-content {
+    text-align: left;
+    font-size:25px;
+}
+
+
+.service-9 {
+    width: 386.5px;
+    height: 312px;
+    position: absolute;
+    right:-4px;
+    margin:0;
+    top: 1293.5px;
+  
+}
+.service-9 .service-content {
+    text-align: right;
+    right: 30px;
+    font-size:25px;
+}
+
+
+
+.openModal {
+    background: rgb(235, 255, 15);
+    color: rgb(0, 0, 0);
+    padding: 7px 40px;
+    border: 2px solid rgb(235, 255, 15);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-color:rgb(235, 255, 15);
+    text-transform: uppercase; 
+    text-decoration: none;
+}
+
+.openModal:hover {
+    background: #005bb500;
+    border: 2px solid rgb(235, 255, 15);
+    border-color: rgb(235, 255, 15);
+    color:rgb(235, 255, 15);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 80px auto;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  /* Блок с текстом */
+  .about-text {
+    flex: 1;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+  }
+
+  .about-text p {
+    margin-bottom: 15px;
+    text-transform: none !important;
+    font-weight: normal !important;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #101010e9;
+    text-transform: none !important;
+    font-weight: bold !important;
+  }
+
+  /* Блок с заявкой */
+  .about-form {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-box {
+    position: relative;
+    background: url('./img/кольцо.jpg') center/cover no-repeat;
+    color: white;
+    padding: 25px;
+    border: 8px solid #fefe00;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Затемнение фона */
+  .form-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.775);
+    z-index: 0;
+  }
+
+  .form-box * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .form-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .form-box input {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background: white;
+    color: #000;
+    font-size: 14px;
+  }
+
+  .form-box input::placeholder {
+    color: #444;
+  }
+
+  .submit-btn {
+    background: #fefe00;
+    color: #000;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .submit-btn:hover {
+    background: #d4d40000;
+  }
+
+  .phone-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .phone-text span {
+    color: #fefe00;
+    font-weight: bold;
+  }
+
+  /* Заголовок */
+  .section-title {
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #fefe00;
+    color: #000;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    
+  }
+
+  /* Адаптивность */
+  @media (max-width: 900px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .about-text {
+      flex: unset;
+      
+    }
+    .about-form {
+      width: 100%;
+    }
+    .form-box {
+      max-width: 100%;
+    }
+  }
+
+
+
+
+  .customm {
+    position: relative;
+    width: 100vw; /* На всю ширину экрана */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    background: url('img/fonnnn.jpg') no-repeat center center / cover;
+    height: 400px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    color: #fff;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+
+.isafety-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    z-index: 10;
+
+}
+
+.text-block h1,
+.text-block h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.text-block h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-block h2 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.image-block img {
+    width: 450px;
+    height: auto;
+    margin-top: 30px;
+    
+
+}
+
+.button-block {
+    margin-top: 30px;
+}
+
+.openModal {
+    background: rgb(235, 255, 15);
+    color: rgb(0, 0, 0);
+    padding: 10px 40px;
+    border: 2px solid rgb(235, 255, 15);
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.openModal:hover {
+    background: transparent;
+    border: 2px solid rgb(235, 255, 15);
+    color: rgb(255, 255, 255);
+}
+
+
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* если хочешь ограничить ширину */
+    margin: 0 auto;     /* центрируем */
+  }
+  
+
+.advantage {
+    position: relative;
+    width: calc(33.333% - 20px);
+    min-height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    background-color: transparent;
+}
+
+.advantage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 0;
+}
+
+.advantage {
+    position: relative;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .advantage-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .advantage-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+
+.caption1 {
+    background-color: #e7ff2f;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.4;
+    text-transform: none !important;
+    font-weight: normal !important;
+}
+
+.main_title1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .advantage {
+        width: 45%;
+    }
+}
+@media (max-width: 600px) {
+    .advantage {
+        width: 100%;
+    }
+}
+
+
+
+
+.custommm .kaknachat {
+    position: relative;
+    width: 100vw;
+    height: 5vh;
+    background-image: url('img/Снимок экрана 2025-04-11 080237.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    margin-bottom: 150px;
+    z-index: 15;
+}
+
+/* Контейнер со всеми шагами */
+.custommm .kaknachat-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 115px;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 250px;
+    bottom: -80px;
+    z-index: 2;
+    text-align: center;
+    color: black;
+}
+
+/* Отдельный шаг */
+.kaknachat-step {
+    max-width: 150px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.kaknachat-step div {
+/* больше отступ сверху */
+    text-align: center; /* выравнивание текста влево */
+}
