@@ -219,7 +219,7 @@
     position: relative;
     z-index: 1;
     height:25%;
-    width:78vw;
+    width:100vw;
     text-align: center;
     margin-top: 50px;
     
@@ -230,6 +230,7 @@
     content: "";
     position: absolute;
     top: 0; left: 0;
+    right:0;
     width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.896);
     z-index: -1;
@@ -293,6 +294,9 @@
     background-color: #fff;
     text-transform: none !important;
     font-weight: normal !important;
+    margin: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
    
   }
   
@@ -385,4 +389,8 @@
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
+}
+
+html, body {
+  overflow-x: hidden;
 }

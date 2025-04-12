@@ -55,12 +55,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+window.addEventListener("load", function () {
+  const swiper = new Swiper('.swiper-container.partners-slider', {
+    slidesPerView: 4,
+    spaceBetween: 50,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+    on: {
+      init: function () {
+        this.slideToLoop(0, 0); // Принудительно перейти на начало
+      }
+    }
+  });
+
+  // Обновляем swiper через небольшой таймер — на случай если слайды ещё не прогрузились
+  setTimeout(() => {
+    swiper.update();
+  }, 200);
+});
 
 
 
-
-
-
+  
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwrklddjqZBzEfkwnQfFtwoDMnJDCptvO4PpFo07GP-q61ABIdYPiFteC4EYk4eNNY/exec';
 
@@ -97,10 +130,11 @@ function showToast(toast) {
 }
 
 
-function changeLanguage(lang) {
-  const select = document.querySelector('.goog-te-combo');
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event('change'));
+  function switchLang(lang) {
+    if (lang === 'ru') {
+      window.location.href = 'index.html';
+    } else if (lang === 'uz') {
+      window.location.href = 'index_uz_full.html';
+    }
   }
-}
+

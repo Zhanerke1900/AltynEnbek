@@ -364,7 +364,7 @@ h1#title {
 .service-4 .service-content {
     top:40%;
     text-align: center;
-    left:0;
+    align-items: center;
 }
 
 .service-5 {
@@ -374,14 +374,19 @@ h1#title {
 }
 .service-5 .service-content {
     text-align: center;
-    top:40%;
-    left:0;
+    bottom:40%;
+    align-items: center; 
+    position: absolute;
     line-height: 1.2;
 }
+
+
+
 .big-text {
     font-size: 60px; /* Или любое другое значение */
     font-weight: bold;
 }
+
 
 
 .service-6 {
@@ -414,6 +419,7 @@ h1#title {
     top: 20px;
     right: 30px;
     font-size:25px;
+    
 }
 
 
@@ -618,23 +624,15 @@ h1#title {
 
 
 
-
   .customm {
     position: relative;
-    width: 100vw; /* На всю ширину экрана */
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-
+    width: 100%;
     background: url('fonnnn.jpg') no-repeat center center / cover;
     height: 400px;
-    left:0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-
     color: #fff;
     overflow: hidden;
     margin-top: 40px;
@@ -647,10 +645,12 @@ h1#title {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100vw;
+    max-width: 1200px;
+    padding: 0 20px;
+    width: 100%;
     z-index: 10;
-
 }
+
 
 .text-block h1,
 .text-block h2 {
@@ -673,7 +673,6 @@ h1#title {
     height: auto;
     margin-top: 30px;
     
-
 }
 
 .button-block {
@@ -706,6 +705,8 @@ h1#title {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding-top: 0;
+    top:0;
     padding: 20px;
     max-width: 1200px; /* если хочешь ограничить ширину */
     margin: 0 auto;     /* центрируем */
@@ -713,10 +714,12 @@ h1#title {
   
 
 .advantage {
-    position: relative;
+    position: absolute;
     width: calc(33.333% - 20px);
     min-height: 250px;
     padding: 20px;
+    padding-top: 0;
+    top: 0%;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -742,7 +745,8 @@ h1#title {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    top: 0%;
   }
   
   .advantage-bg {
@@ -842,3 +846,120 @@ h1#title {
 /* больше отступ сверху */
     text-align: center; /* выравнивание текста влево */
 }
+
+
+
+
+@media (max-width: 768px) {
+
+    header {
+      margin-left: 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .logo {
+      left: 20px;
+      width: 120px;
+    }
+  
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-end;
+      right: 10px;
+      padding: 5px;
+    }
+  
+    .language-switcher {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .customm {
+      height: auto;
+      flex-direction: column;
+      padding: 30px 10px;
+      text-align: center;
+    }
+  
+    .image-block img {
+      width: 90%;
+      margin-top: 20px;
+    }
+  
+    .text-block h1 {
+      font-size: 20px;
+    }
+  
+    .text-block h2 {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  
+    .button-block {
+      margin-top: 20px;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      padding: 0 15px;
+    }
+  
+    .about-text,
+    .about-form {
+      width: 100%;
+    }
+  
+    .form-box {
+      width: 100%;
+    }
+  
+    .modal-content {
+      width: 90%;
+      height: auto;
+    }
+  
+    .services {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service,
+    .service-2,
+    .service-3,
+    .service-4,
+    .service-5,
+    .service-6,
+    .service-7,
+    .service-8,
+    .service-9 {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+      margin-bottom: 20px;
+    }
+  
+    .service-content {
+      position: static;
+      text-align: center !important;
+      font-size: 20px !important;
+    }
+  
+    .big-text {
+      font-size: 35px;
+    }
+  
+    .custommm .kaknachat-content {
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+  }
+  
