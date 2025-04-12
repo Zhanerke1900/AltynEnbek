@@ -394,3 +394,93 @@
 html, body {
   overflow-x: hidden;
 }
+
+
+/* 📱 Мобильная адаптация (до 480px) */
+@media (max-width: 480px) {
+  .titlee {
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .top-form {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .top-form-container {
+    padding: 10px;
+  }
+
+  .logo-side {
+    padding: 10px;
+  }
+
+  .logo-side img {
+    max-width: 160px;
+  }
+
+  .form-side {
+    padding: 15px;
+  }
+
+  .form-side input {
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .form-side h2 {
+    font-size: 20px;
+  }
+
+  .form-side .subtitle {
+    font-size: 15px;
+  }
+
+  .form-side .subtitle2 {
+    font-size: 14px;
+  }
+
+  .submit-btn-top {
+    font-size: 14px;
+    padding: 4px 15px;
+  }
+
+  .phone-text-top {
+    font-size: 14px;
+  }
+
+  .phone-text-top span {
+    font-size: 18px;
+  }
+
+  .top-form1 {
+    padding: 40px 10px;
+  }
+
+  .top-form1 form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-inline input {
+    width: 100%;
+  }
+
+  .top-form1 .submit-btn-top {
+    width: 100%;
+  }
+
+  .custom5 {
+    margin: 20px 10px;
+    padding: 10px;
+  }
+
+  .footer-services,
+  .footer-branches,
+  .footer-contact {
+    margin-left: 10px;
+    text-align: center;
+  }
+}
