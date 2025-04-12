@@ -962,3 +962,150 @@ h1#title {
     }
   
   }
+
+
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    header {
+      margin-left: 0;
+      margin-top: 100px;
+      text-align: center;
+    }
+  
+    .logo {
+      left: 10px;
+      width: 100px;
+    }
+  
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-end;
+      right: 10px;
+      top: 10px;
+    }
+  
+    .language-switcher {
+      margin-left: 0;
+    }
+  
+    .top-form-container,
+    .top-form-container1 {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .logo-side {
+      text-align: center;
+    }
+  
+    .logo-side img {
+      max-width: 180px;
+    }
+  
+    .form-side {
+      padding: 20px;
+    }
+  
+    .form-side input {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .submit-btn-top {
+      width: 100%;
+    }
+  
+    .services {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service,
+    .service-2,
+    .service-3,
+    .service-4,
+    .service-5,
+    .service-6,
+    .service-7,
+    .service-8,
+    .service-9 {
+      width: 100% !important;
+      position: static !important;
+      height: auto !important;
+      margin: 10px 0;
+    }
+  
+    .service-content {
+      position: static !important;
+      text-align: center;
+      font-size: 18px;
+    }
+  
+    .advantages {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .advantage {
+      width: 100% !important;
+      position: static;
+      margin-bottom: 20px;
+    }
+  
+    .advantage .caption1 {
+      font-size: 18px;
+    }
+  
+    .form-box {
+      padding: 20px;
+    }
+  
+    .modal-content {
+      width: 90%;
+      height: auto;
+    }
+  
+    .custommm .kaknachat-content {
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .kaknachat-step {
+      max-width: 100%;
+      font-size: 16px;
+    }
+  
+    .image-block img {
+      width: 90%;
+    }
+  
+    .custom5 {
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .footer-services,
+    .footer-branches,
+    .footer-contact {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    footer .container6 {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+  
