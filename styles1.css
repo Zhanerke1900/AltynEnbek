@@ -1,4 +1,7 @@
-.partners.section {
+body, html {
+  overflow-x: hidden;
+}
+ .partners.section {
     position: relative;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -50,6 +53,7 @@
   .swiper-container {
     overflow: hidden; /* Обрезаем всё, что вылезает */
     padding: 0 40px; /* Чтобы логотипы не были слишком у краёв */
+   
   }
   
   .swiper-slide {
