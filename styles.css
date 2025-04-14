@@ -222,8 +222,6 @@ h1#title {
 }
 
 
-
-
 .modal {
   display: none; /* По умолчанию скрыто */
   position: fixed;
@@ -273,7 +271,6 @@ h1#title {
   font-size: 25px;
   cursor: pointer;
 }
-
 
 
 
@@ -440,27 +437,6 @@ h1#title {
   font-size:25px;
 }
 
-
-.openModal {
-  background: rgb(235, 255, 15);
-  color: rgb(0, 0, 0);
-  padding: 7px 40px;
-  border: 2px solid rgb(235, 255, 15);
-  cursor: pointer;
-  font-size: 12px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  border-color:rgb(235, 255, 15);
-  text-transform: uppercase; 
-  text-decoration: none;
-}
-
-.openModal:hover {
-  background: #005bb500;
-  border: 2px solid rgb(235, 255, 15);
-  border-color: rgb(235, 255, 15);
-  color:rgb(235, 255, 15);
-}
 
 .about-container {
   display: flex;
@@ -908,7 +884,14 @@ html, body {
   font-family: sans-serif;
 }
 
+
+
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
 
   header {
     margin-left: 0;
@@ -1082,47 +1065,57 @@ html, body {
     height: 30px;
   }
   
-.menu-toggle {
-  position:absolute;
-  top: 180px;
-  right: 40px;
-  font-size: 32px;
-  cursor: pointer;
-  z-index: 1001;
-  color: #f1ff00;
+/* По умолчанию скрыто для всех */
+}
+/* Только для телефонов (макс ширина 768px) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 180px;
+    right: 40px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1001;
+    color: #f1ff00;
+  }
+
+  .side-menu {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    color: white;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .side-menu li {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .side-menu a:hover {
+    color: #f1ff00;
+  }
 }
 
-/* Выезжающее меню */
+
+.menu-toggle,
 .side-menu {
-  position: absolute;
-  top: 100px;
-  right: -250px;
-  width: 250px;
-  height: 100%;
-  color: white;
-  padding-top: 60px;
-  transition: right 0.3s ease;
-  z-index: 1000;
-}
-
-.side-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.side-menu li {
-  padding: 5px;
-  text-align: center;
-}
-
-.side-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.side-menu a:hover {
-  color: #f1ff00;
-}
-
+  display: none;
 }
