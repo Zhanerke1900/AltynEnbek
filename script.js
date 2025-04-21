@@ -198,12 +198,16 @@ function showToast(toast) {
       window.location.href = 'index_uz_full.html';
     }
   }
-
   function toggleMenu() {
     const menu = document.getElementById("side-menu");
+    const content = document.querySelector("main"); // или другой блок с контентом
+  
     if (menu.style.right === "0px") {
       menu.style.right = "-250px";
+      content.style.marginTop = "0";
     } else {
       menu.style.right = "0px";
+      content.style.marginTop = "250px"; // смещение вниз
     }
   }
+  

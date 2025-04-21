@@ -611,10 +611,13 @@ h1#title {
 }
 
 .contact-info {
-  display: flex;
- left: 110px;
- top:5px;
   position: absolute;
+  top: 10px; /* по вертикали отступ от верха */
+  left: 50%;
+  transform: translateX(-50%); /* центр по горизонтали */
+  
+  display: flex;
+
   flex-direction: column;
   gap: 5px;
   background-color: #ffffff;
@@ -640,12 +643,16 @@ h1#title {
 }
 
 .language-switcher {
+  position: absolute;
+ 
+  left: 50%;
+  transform: translateX(-50%); /* центр по горизонтали */
+  
   display: flex;
   flex-direction: column; /* Флаги вертикально */
   align-items: center;
-  top: 80px;
-  position: absolute;
-  left:195px;
+  top: 85px;
+ 
   gap: 5px;
 }
 
@@ -925,43 +932,45 @@ html, body {
     padding: 0;
     margin: 0;
   }
-  h1#title{
-    display: flex;
-    justify-content: center; /* по горизонтали */
-    align-items: center;     /* по вертикали */
-    height: 100vh; 
-    position:absolute;
-    top:50px;
-    left: 20px;
-    font-size: 30px; /* Увеличенный размер шрифта */
-    color: white; /* Белый цвет текста */
-    text-align: center; /* Центрирование */
-    margin-top: 0; /* Отступ сверху, чтобы не наезжало на меню */
-    line-height: 1.3; /* Межстрочный интервал */
-   
-    margin-left: auto;
-    margin-right: auto;
+  h1#title {
+    position: absolute;
+    top: 300px; /* по вертикали отступ от верха */
+    left: 50%;
+    transform: translateX(-50%); /* центр по горизонтали */
+    
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0; /* убрали лишние отступы */
   }
   
-.openModal {
-
-  background: rgb(235, 255, 15);
-  color: rgb(0, 0, 0);
-  padding: 10px 40px;
-  border: 2px solid rgb(235, 255, 15);
-  cursor: pointer;
-  font-size: 14px;
-  position: absolute;
-  left:120px;
-  top:80px;
   
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
+  .openModal {
+    background: rgb(235, 255, 15);
+    color: rgb(0, 0, 0);
+    padding: 10px 40px;
+    border: 2px solid rgb(235, 255, 15);
+    cursor: pointer;
+    font-size: 14px;
+  
+    position: absolute;
+    top: 570px;
+    left: 50%;
+    transform: translateX(-50%); /* <-- Центрируем по горизонтали */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
 .service {
   position: absolute;
   overflow: hidden;
@@ -1155,6 +1164,7 @@ html, body {
     pointer-events: none;
   }
 
+
   .fixed-buttons a {
     pointer-events: auto;
     background-color: #e4ff00;
@@ -1176,13 +1186,21 @@ html, body {
     width: 40px;
     height: 40px;
   }
-  
-/* По умолчанию скрыто для всех */
 }
+@media (min-width: 768px) {
+  .fixed-buttons {
+    display: none !important;
+  }
+  .fixed-buttons a {
+    display: none !important;
+  }
+}
+
+
 /* Только для телефонов (макс ширина 768px) */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    
     position: absolute;
     top: 180px;
     right: 40px;
@@ -1193,7 +1211,7 @@ html, body {
   }
 
   .side-menu {
-    display: block;
+    
     position: absolute;
     top: 100px;
     right: -250px;
@@ -1226,8 +1244,11 @@ html, body {
   }
 }
 
-
-.menu-toggle,
-.side-menu {
-  display: none;
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none !important;
+  }
+  .side-menu {
+    display: none !important;
+  }
 }
