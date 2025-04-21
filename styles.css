@@ -233,13 +233,15 @@ h1#title {
   background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
   justify-content: center;
   align-items: left;
+
+
 }
 
 .modal-content {
   background-color: #fff;
   padding: 20px;
   width: 550px;
-  height: 150px;
+  height: 200px;
   border-radius: 5px;
   text-align: left;
   color: rgb(49, 49, 49);
@@ -247,6 +249,8 @@ h1#title {
   top:30px;
   align-items: left;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+
 }
 .modal-content h2 {
   font-size: 15px; /* Размер шрифта */
@@ -260,6 +264,7 @@ h1#title {
 .modal-content input {
   display: block; /* Каждый input занимает всю ширину */
   width: 100%; /* Растягиваем на всю ширину */
+  height:30px;
   margin-bottom: 15px; /* Добавляем отступ между полями */
 
 }
@@ -623,6 +628,9 @@ h1#title {
   align-items: center;
   padding: 10px 10px;
   background-color: rgb(229, 255, 0);
+
+
+ 
 }
 
 .phone-btn:hover, .email-btn:hover {
@@ -833,7 +841,7 @@ h1#title {
 .custommm .kaknachat {
   position: relative;
   width: 100vw;
-  height: 5vh;
+  height: 21vh;
   background-image: url('Снимок экрана 2025-04-11 080237.png');
   background-size: cover;
   background-position: center;
@@ -847,11 +855,11 @@ h1#title {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 115px;
+  gap: 130px;
   flex-wrap: wrap;
   position: absolute;
-  left: 250px;
-  bottom: -80px;
+  left: 205px;
+  bottom: -70px;
   z-index: 2;
   text-align: center;
   color: black;
@@ -859,7 +867,7 @@ h1#title {
 
 /* Отдельный шаг */
 .kaknachat-step {
-  max-width: 150px;
+  max-width: 400px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -882,6 +890,17 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   font-family: sans-serif;
+}
+.openModal1 {
+  cursor: pointer;
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: #fff; /* начальный цвет — белый */
+  transition: color 0.3s ease;
+}
+
+.openModal1:hover {
+  color: yellow; /* при наведении */
 }
 
 
@@ -911,24 +930,116 @@ html, body {
     justify-content: center; /* по горизонтали */
     align-items: center;     /* по вертикали */
     height: 100vh; 
-
-    font-size: 33px; /* Увеличенный размер шрифта */
+    position:absolute;
+    top:50px;
+    left: 20px;
+    font-size: 30px; /* Увеличенный размер шрифта */
     color: white; /* Белый цвет текста */
     text-align: center; /* Центрирование */
     margin-top: 0; /* Отступ сверху, чтобы не наезжало на меню */
     line-height: 1.3; /* Межстрочный интервал */
-    max-width: 750px; /* Ограничиваем ширину */
+   
     margin-left: auto;
     margin-right: auto;
   }
+  
+.openModal {
+
+  background: rgb(235, 255, 15);
+  color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  border: 2px solid rgb(235, 255, 15);
+  cursor: pointer;
+  font-size: 14px;
+  position: absolute;
+  left:120px;
+  top:80px;
+  
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.service {
+  position: absolute;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 300px;
+  background: #ffffff;
+}
+
+  
+.service img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+.service-content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.service-content .caption {
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.index::before {
+  content: "";  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('pic1.jpg'); 
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+
+  z-index: -1; 
+}
+
+
+.button-image {
+  width: 115px; /* Размер кнопки */
+  height: auto;
+  border: none;
+  bottom:4%;
+  right:0%;
+  position:absolute;
+  cursor: pointer;
+}
   .logo {
     position: absolute;
-    left: 0;
+    left: 20px;
     top:150px;
     width: 120px;
     margin: 0 auto;
     display: block;
   }
+  .openModal1 {
+    cursor: pointer;
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: #fff; /* начальный цвет — белый */
+    transition: color 0.3s ease;
+  }
+
+  .openModal1:hover {
+    color: yellow; /* при наведении */
+  }
+  
 
   .yellow-bar {
     position: absolute;
@@ -989,7 +1100,8 @@ html, body {
 
   .modal-content {
     width: 90%;
-    height: auto;
+    height: 27%;
+
   }
 
   .services {
@@ -1034,7 +1146,7 @@ html, body {
   /* Кнопки WhatsApp и звонка */
   .fixed-buttons {
     position: fixed;
-    bottom: 20px;
+    bottom: 45px;
     left: 20px;
     right: 20px;
     z-index: 9999;
@@ -1047,8 +1159,8 @@ html, body {
     pointer-events: auto;
     background-color: #e4ff00;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1061,8 +1173,8 @@ html, body {
   }
 
   .fixed-buttons img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   
 /* По умолчанию скрыто для всех */

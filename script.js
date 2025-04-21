@@ -55,6 +55,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+  const modalContent = document.querySelector(".modal-content");
+  const openModal1Buttons = document.querySelectorAll(".openModal1");
+
+  modal.style.display = "none";
+
+  openModal1Buttons.forEach(button => {
+      button.addEventListener("click", function () {
+          modalContent.innerHTML = `
+              <span class="close">&times;</span>
+              <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
+              <input type="text" placeholder="Ваше имя*" id="nameInput" required>
+              <input type="text" placeholder="Ваш телефон*" id="phoneInput" required>
+              <button id="submit">Отправить</button>
+          `;
+          modal.style.display = "flex";
+
+          document.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
+
+          document.getElementById("submit").addEventListener("click", () => {
+              const name = document.getElementById("nameInput").value.trim();
+              const phone = document.getElementById("phoneInput").value.trim();
+
+              if (!name || !phone) {
+                  alert("Пожалуйста, заполните все поля!");
+                  return;
+              }
+
+              const formData = new FormData();
+              formData.append("name", name);
+              formData.append("phone", phone);
+
+              fetch("https://script.google.com/macros/s/AKfycbwrklddjqZBzEfkwnQfFtwoDMnJDCptvO4PpFo07GP-q61ABIdYPiFteC4EYk4eNNY/exec", {
+                  method: "POST",
+                  mode: "no-cors",
+                  body: formData
+              });
+
+              modalContent.innerHTML = `
+                  <span class="close">&times;</span>
+                  <h2 style="color: #ff0; text-align: center;">ВАША ЗАЯВКА ПРИНЯТА!</h2>
+                  <p style="text-align: center; color: #ff0;">Наш сотрудник свяжется с Вами в ближайшее время.</p>
+              `;
+
+              document.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
+          });
+      });
+  });
+
+  window.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+  });
+});
+
+
+
+
+
 window.addEventListener("load", function () {
   const swiper = new Swiper('.swiper-container.partners-slider', {
     slidesPerView: 4,
