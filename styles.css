@@ -983,18 +983,21 @@ html, body {
   position: absolute;
   overflow: hidden;
   margin-left: 15px !important;
-  margin-right: 15px !important;
+  margin-right: 0 !important;
+  left:15px;
 
   background: #ffffff;
 }
 
   
 .service img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 93%;
+ 
 
 }
+
+
+
 
 .service-content {
   position: absolute;
@@ -1010,10 +1013,11 @@ html, body {
 .service-content .caption {
   text-transform: uppercase;
   line-height: 1.2;
+
 }
 
 .index::before {
-  content: "";  
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -1023,7 +1027,7 @@ html, body {
               url('pic1.jpg'); 
   background-size: cover;  
   background-position: center; 
-  background-repeat: no-repeat; 
+  
 
   z-index: -1; 
 }
@@ -1147,6 +1151,7 @@ html, body {
     position: static !important;
     text-align: center !important;
     font-size: 20px !important;
+    
   }
 
   .big-text {
