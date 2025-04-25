@@ -137,12 +137,16 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = 'index_uz_full.html';
       }
     }
-  
     function toggleMenu() {
       const menu = document.getElementById("side-menu");
-      if (menu.style.right === "0px") {
-        menu.style.right = "-250px";
-      } else {
-        menu.style.right = "0px";
-      }
+      const title = document.getElementById("title");
+      const button = document.querySelector(".openModal");
+    
+      const isOpen = menu.style.right === "0px";
+    
+      menu.style.right = isOpen ? "-250px" : "0px";
+    
+      title.classList.toggle("shifted", !isOpen);
+      button.classList.toggle("shifted", !isOpen);
     }
+    

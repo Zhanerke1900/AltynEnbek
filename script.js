@@ -200,14 +200,14 @@ function showToast(toast) {
   }
   function toggleMenu() {
     const menu = document.getElementById("side-menu");
-    const content = document.querySelector("main"); // или другой блок с контентом
+    const title = document.getElementById("title");
+    const button = document.querySelector(".openModal");
   
-    if (menu.style.right === "0px") {
-      menu.style.right = "-250px";
-      content.style.marginTop = "0";
-    } else {
-      menu.style.right = "0px";
-      content.style.marginTop = "250px"; // смещение вниз
-    }
+    const isOpen = menu.style.right === "0px";
+  
+    menu.style.right = isOpen ? "-250px" : "0px";
+  
+    title.classList.toggle("shifted", !isOpen);
+    button.classList.toggle("shifted", !isOpen);
   }
   
