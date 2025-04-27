@@ -361,6 +361,7 @@ h1#title {
   top:40%;
   text-align: center;
   align-items: center;
+  left: 1%;
 }
 
 .service-5 {
@@ -1406,11 +1407,14 @@ color: #00000000;
   height: 100%; /* ставим не 96%, а 100%, чтобы не прыгало */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
               url('pic1.jpg');
-  background-size: cover;
-  background-position: center;
+  
   background-repeat: no-repeat;
-  background-attachment: local; /* заменяем scroll на local */
   z-index: -1;
+
+  background-image: url('your-image.jpg');
+  background-attachment: fixed;
+  background-size: cover; /* для масштабирования изображения */
+  background-position: center; 
 }
 
 
