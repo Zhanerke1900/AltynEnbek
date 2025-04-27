@@ -1139,7 +1139,7 @@ color: #00000000;
 .service-1 .service-content button {
   margin-top: 10px;
   padding: 10px 60px;
- 
+  color: #000;
   cursor: pointer;
   position: static; /* убираем абсолют */
   transform: none; 
@@ -1157,7 +1157,7 @@ color: #00000000;
 .service-2 .service-content button {
   margin-top: 10px;
   padding: 10px 60px;
- 
+  color: #000;
   cursor: pointer;
   position: static; /* убираем абсолют */
   transform: none; 
@@ -1175,7 +1175,7 @@ color: #00000000;
 .service-3 .service-content button {
   margin-top: 10px;
   padding: 10px 60px;
- 
+  color: #000;
   cursor: pointer;
   position: static; /* убираем абсолют */
   transform: none; 
