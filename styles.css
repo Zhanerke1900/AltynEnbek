@@ -203,14 +203,16 @@ h1#title {
 
 
 .button-image {
-  width: 350px; /* Размер кнопки */
+  width: 115px;
   height: auto;
   border: none;
-  bottom:0;
-  right:0;
-  position:absolute;
+  bottom: 4%;
+  right: 0%;
+  position: fixed; /* поменяли на fixed */
   cursor: pointer;
+  z-index: 1000; /* чтобы всегда была поверх */
 }
+
 
 #redirectButton {
   background: none;
