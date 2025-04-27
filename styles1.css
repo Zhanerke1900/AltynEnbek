@@ -11,7 +11,7 @@ body, html {
     background-repeat: no-repeat;
     color: #fff;
     z-index: 0;
-    margin-top: 20px;
+    margin-top: 100px;
     text-align: center;
   }
   
@@ -242,7 +242,7 @@ body, html {
   
   .form-box-top1 {
     max-width: 1000px;
-    margin: 0 auto;
+    
   }
   
   .form-box-top1 h2 {
@@ -263,6 +263,7 @@ body, html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    left: 50%;
     gap: 10px;
   }
   
@@ -305,7 +306,7 @@ body, html {
   }
   
   .container5 {
-    margin-top: 100px;
+    margin-top: 30px;
     line-height: 1.6;
     font-weight: normal !important;
   }
@@ -313,6 +314,7 @@ body, html {
   .container5 h2 {
     font-size: 25px;
     margin-top: 20px;
+    text-align: center;
     margin-bottom: 10px;
 
   }
@@ -321,6 +323,7 @@ body, html {
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 10px;
+    text-align: center;
   }
   
   .container5 p {
@@ -411,6 +414,7 @@ html, body {
   .top-form {
     flex-direction: column;
     padding: 30px 15px;
+    margin-top: -10px;
   }
 
   .top-form-container {
@@ -461,6 +465,8 @@ html, body {
 
   .top-form1 {
     padding: 40px 10px;
+    bottom: -50px;
+    top: -20px;
   }
 
   .top-form1 form {
@@ -469,11 +475,12 @@ html, body {
   }
 
   .form-inline input {
-    width: 100%;
+    width: 60%;
+    
   }
 
   .top-form1 .submit-btn-top {
-    width: 100%;
+    width: 60%;
   }
 
   .custom5 {
