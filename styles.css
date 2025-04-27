@@ -206,8 +206,8 @@ h1#title {
   width: 350px; /* Размер кнопки */
   height: auto;
   border: none;
-  bottom:0%;
-  right:0%;
+  bottom:0;
+  right:0;
   position:absolute;
   cursor: pointer;
 }
