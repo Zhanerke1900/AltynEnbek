@@ -577,6 +577,8 @@ h1#title {
 
 /* Адаптивность */
 @media (max-width: 768px) {
+ 
+
   .about-container {
     flex-direction: column;
     align-items: center;
@@ -1496,7 +1498,15 @@ html, body {
     text-align: center;
     margin-bottom: -70px;
   }
- 
+ .custom {
+  position: relative;
+}
+
+.container {
+  position: relative;  /* Родительский контейнер с position: relative */
+}
+
+  
 
 .customm {
   position: relative;
@@ -1617,6 +1627,8 @@ html, body {
   .modal-content {
     width: 90%;
     height: 27%;
+    position: fixed;
+    z-index: 1000000;
 
   }
 
