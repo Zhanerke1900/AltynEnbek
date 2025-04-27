@@ -839,13 +839,13 @@ h1#title {
   color: black;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 8px;
+  justify-content: center;
   height: 60px;
-  display: inline-block;
+  display: flex;
   max-width: 100%;
   text-align: center;
-  
-  margin-bottom: 10px;
+  align-items: center;
+ 
 }
 
 .description {
