@@ -41,6 +41,7 @@ section {
   padding-top: 220px;
   text-align: center;
   padding-bottom: 120px;
+ 
 }
 
 .logo {
@@ -577,7 +578,6 @@ h1#title {
 
 /* Адаптивность */
 @media (max-width: 768px) {
- 
 
   .about-container {
     flex-direction: column;
@@ -1447,11 +1447,16 @@ html, body {
 .button-image {
   width: 115px; /* Размер кнопки */
   height: auto;
-  border: none;
-  bottom:4%;
-  right:0%;
+ 
   position:absolute;
   cursor: pointer;
+
+  
+  bottom: 30px;
+  right: 0;
+  
+
+  z-index: 999;
 }
   .logo {
     position: absolute;
