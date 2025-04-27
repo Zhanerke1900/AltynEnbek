@@ -1,7 +1,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 700; 
-  min-height: 800vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+
   margin: 0;
   padding: 0;
   text-transform: uppercase; 
@@ -203,15 +204,14 @@ h1#title {
 
 
 .button-image {
-  width: 115px;
+  width: 300px; /* Размер кнопки */
   height: auto;
   border: none;
-  bottom: 4%;
-  right: 0%;
-  position: fixed; /* поменяли на fixed */
+  bottom:0%;
+  right:0%;
+  position:absolute;
   cursor: pointer;
-  z-index: 1000; /* чтобы всегда была поверх */
-}
+} 
 
 
 #redirectButton {
@@ -895,7 +895,8 @@ h1#title {
 .custommm .kaknachat {
   position: relative;
   width: 100vw;
-  height: 21vh;
+  height: calc(var(--vh, 1vh) * 21);
+
   background-image: url('Снимок экрана 2025-04-11 080237.png');
   background-size: cover;
   background-position: center;
@@ -1707,7 +1708,8 @@ html, body {
   
   .menu-wrapper {
     position: relative;
-    min-height: 50vh;
+    min-height: calc(var(--vh, 1vh) * 50);
+
   }
   
   .side-menu {
@@ -1715,7 +1717,8 @@ html, body {
     top: 100px;
     right: -250px; /* скрыто за пределами */
     width: 250px;
-    height: 100vh; /* занимает всю высоту экрана */
+    height: calc(var(--vh, 1vh) * 100);
+
     color: white;
     padding-top: 0;
     transition: right 0.3s ease;
