@@ -211,3 +211,32 @@ function showToast(toast) {
     button.classList.toggle("shifted", !isOpen);
   }
   
+
+  
+  // Ждём загрузку страницы
+  window.addEventListener('DOMContentLoaded', function() {
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function() {
+      // Проверяем высоту header
+      const headerHeight = header.offsetHeight;
+      
+      // Если прокрутили ниже header — показать кнопку
+      if (window.scrollY > headerHeight) {
+        scrollBtn.style.display = 'flex';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    });
+
+    // Плавная прокрутка вверх
+    scrollBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+
