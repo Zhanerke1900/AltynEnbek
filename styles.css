@@ -1452,8 +1452,8 @@ html, body {
   cursor: pointer;
 
   
-  bottom: 30px;
-  right: 0;
+  right:0;
+  top:691px;
   
 
   z-index: 999;
