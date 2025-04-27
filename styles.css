@@ -1398,17 +1398,22 @@ color: #00000000;
 }
 .index::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 96vh; /* вместо процента ставим vh — 96% от высоты экрана */
+  height: 96%;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('pic1.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: scroll; /* <-- это ключевое! фон будет приклеен к элементу, не к экрану */
   z-index: -1;
 }
+html, body {
+  overflow-x: hidden;
+}
+
 
 
  
