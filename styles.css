@@ -104,9 +104,8 @@ button:hover {
   border-color:rgb(82, 134, 197);
   border-radius: 5px;
   text-transform:none;
-  position: absolute;
-  left:20px;
-  bottom:20px;
+  position: relative;
+  
 }
 #submit:hover{
   background-color: rgb(50, 94, 148);
