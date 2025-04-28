@@ -46,9 +46,9 @@ section {
 
 .logo {
   position: absolute; /* Фиксируем позицию */
-  top: -85px; /* Отступ сверху */
-  left: 100px; /* Отступ слева */
-  width: 350px; /* Размер логотипа */
+  top: 0; /* Отступ сверху */
+  left: 170px; /* Отступ слева */
+  width: 170px; /* Размер логотипа */
   z-index: 1000; 
 }
 
@@ -1459,9 +1459,9 @@ html, body {
 }
   .logo {
     position: absolute;
-    left: -30px;
-    top:90px;
-    width: 240px;
+    left: 20px;
+    top:150px;
+    width: 120px;
     margin: 0 auto;
     display: block;
   }
