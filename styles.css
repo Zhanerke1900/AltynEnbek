@@ -1459,9 +1459,9 @@ html, body {
 }
   .logo {
     position: absolute;
-    left: 20px;
-    top:150px;
-    width: 120px;
+    left: -30px;
+    top:90px;
+    width: 240px;
     margin: 0 auto;
     display: block;
   }
