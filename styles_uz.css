@@ -1,4 +1,124 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; 
+  min-height: calc(var(--vh, 1vh) * 100);
 
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase; 
+  color: #ffffff;
+  font-size: 15px;
+}
+
+header {
+  margin-top: 85px;  /* Опускает текст вниз */
+  margin-left: 500px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Центрируем меню */
+  gap: 10px; /* Регулируем расстояние между пунктами */
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+   margin: 0 15px;
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+nav ul li a:hover {
+  color: yellow;
+}
+
+section {
+  padding-top: 220px;
+  text-align: center;
+  padding-bottom: 120px;
+ 
+}
+
+.logo {
+  position: absolute; /* Фиксируем позицию */
+  top: 0; /* Отступ сверху */
+  left: 170px; /* Отступ слева */
+  width: 170px; /* Размер логотипа */
+  z-index: 1000; 
+}
+
+.yellow-bar {
+  background: yellow;
+  height: 1px; /* Измени при необходимости */
+  width: 100%; /* Растягивает линию на всю ширину экрана */
+  position: absolute;
+  top: 150px; /* Опусти линию немного вниз */
+  left: 0;
+}
+
+#contact {
+  background: white;
+}
+
+form input, form textarea {
+  width: 80%;
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 30px;
+  
+}
+
+button {
+  background: rgb(235, 255, 15);
+  color: rgb(0, 0, 0);
+  padding: 10px 45px;
+  border: 2px solid rgb(235, 255, 15);
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  border-color:rgb(235, 255, 15);
+  text-transform: uppercase; 
+  text-decoration: none;
+}
+
+button:hover {
+  background: #005bb500;
+  border: 2px solid rgb(235, 255, 15);
+  border-color: rgb(235, 255, 15);
+  color: white;
+}
+
+#submit{
+  background-color: rgb(85, 138, 202);
+  color:#fff;
+  padding: 10px 15px;
+  font-size: 12px;
+  border-color:rgb(82, 134, 197);
+  border-radius: 5px;
+  text-transform:none;
+  position: relative;
+  
+}
+#submit:hover{
+  background-color: rgb(50, 94, 148);
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000000;
+  color: white;
+ 
+}
+
+nav a { margin: 0; text-decoration: none; color: rgb(255, 255, 255); }
 
 h1#title {
   font-size: 33px; /* Увеличенный размер шрифта */
@@ -6,16 +126,235 @@ h1#title {
   text-align: center; /* Центрирование */
   margin-top: 0; /* Отступ сверху, чтобы не наезжало на меню */
   line-height: 1.3; /* Межстрочный интервал */
-  max-width: 700px; /* Ограничиваем ширину */
+  max-width: 750px; /* Ограничиваем ширину */
   margin-left: auto;
   margin-right: auto;
 
+}
+
+.index::before {
+  content: "";  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('pic1.jpg'); 
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+
+  z-index: -1; 
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end; /* Прижимаем кнопки к правому краю */
+      align-items: center; 
+  position: absolute; /* Или relative, если нужно */
+  top: 0; /* Поднимаем вверх */
+  right: 30px;
+  width: 100%;
+  text-transform: lowercase; 
+  padding: 10px 20px;
+  
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+}
+
+.phone-btn, .email-btn {
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px;
+  background-color: rgb(229, 255, 0);
+}
+
+.phone-btn:hover, .email-btn:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px; /* Толщина подчеркивания */
+  text-underline-offset: 1px;
+}
+
+.language-switcher {
+  display: flex;
+  flex-direction: column; /* Флаги вертикально */
+  align-items: center;
+  margin-left: 150px;
+}
+
+.language-switcher img {
+  width: 25px;
+  margin-bottom: 5px; /* Отступ между флагами */
+  transition: 0.3s;
+}
+
+.language-switcher img:hover {
+  transform: scale(1.1);
+}
+
+
+.button-image {
+  width: 300px; /* Размер кнопки */
+  height: auto;
+  border: none;
+  bottom:0%;
+  right:0%;
+  position:absolute;
+  cursor: pointer;
+} 
+
+
+#redirectButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#redirectButton:hover .button-image {
+  opacity: 0.8;
+}
+
+
+.modal {
+  display: none; /* По умолчанию скрыто */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+  justify-content: center;
+  align-items: left;
+
+
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 550px;
+  height: 200px;
+  border-radius: 5px;
+  text-align: left;
+  color: rgb(49, 49, 49);
+  position: fixed;
+  top:30px;
+  align-items: left;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+
+}
+.modal-content h2 {
+  font-size: 15px; /* Размер шрифта */
+  font-weight: bold; /* Жирный текст */
+  text-align: left; /* Выравнивание по центру */
+  color: #4e4e4e; /* Цвет текста */
+  margin-bottom: 15px; /* Отступ снизу */
+  margin-top: 0;
+  text-transform: uppercase; /* Все буквы заглавные */
+}
+.modal-content input {
+  display: block; /* Каждый input занимает всю ширину */
+  width: 100%; /* Растягиваем на всю ширину */
+  height:30px;
+  margin-bottom: 15px; /* Добавляем отступ между полями */
+
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1150px;
+  margin: auto;
+  margin-top: 200px;
+  position: relative;
+  
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+  margin: 4px;
+  background: #000;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+.service-content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.service-content .caption {
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.service-1 {
+  width: 100%;
+}
+
+.service-2 {
+  width: 66%;
+  height: auto;
+  position: relative;
+}
+
+.service-2 .service-content {
+  right: 20px;
+  left: auto;
+  text-align: right;
+}
+
+.service-3 {
+  width: 66%;
+  height: auto;
+  position: relative;
+}
+.service-3 .service-content {
+  right: 20px;
+  left: auto;
+  text-align: right;
 }
 
 .service-4 {
   width: 386.5px;/* Сделать картинку меньше */
   height: 614.5px;
   position: absolute;
+  right:-4px;
   margin:0;
   top: 353.5px;
 
@@ -24,12 +363,7 @@ h1#title {
   top:40%;
   text-align: center;
   align-items: center;
-  justify-content: center;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-
-  
+  left: 8%;
 }
 
 .service-5 {
@@ -42,332 +376,1423 @@ h1#title {
   bottom:40%;
   align-items: center; 
   position: absolute;
+  left: 18%;
   line-height: 1.2;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
 }
 
+
+.big-text {
+  font-size: 60px; /* Или любое другое значение */
+  font-weight: bold;
+}
+
+
+.service-6 {
+  width: 382.5px;
+  height: auto;
+  position: absolute;
+  left:380.5px;
+  margin:0;
+  top: 972px;
+
+}
+.service-6 .service-content {
+  text-align: left;
+  top: 20px;
+  font-size:25px;
+}
+
+.service-7 {
+  width: 386.5px;
+  height: 317.5px;
+  position: absolute;
+  right:-4px;
+  margin:0;
+  top: 972px;
+
+}
+.service-7 .service-content {
+  text-align: right;
+  top: 20px;
+  right: 30px;
+  font-size:25px;
+  
+}
+
+
+.service-8 {
+  width: 382.5px;
+  height: 312px;
+  position: absolute;
+  left:380.5px;
+  margin:0;
+  top: 1293.5px;
+
+}
+.service-8 .service-content {
+  text-align: left;
+  font-size:25px;
+}
+
+.service-9 {
+  width: 386.5px;
+  height: 312px;
+  position: absolute;
+  right:-4px;
+  margin:0;
+  top: 1293.5px;
+
+}
+.service-9 .service-content {
+  text-align: right;
+  right: 30px;
+  font-size:25px;
+}
+
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 80px auto;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Блок с текстом */
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #101010e9;
+  text-transform: none !important;
+  font-weight: bold !important;
+}
+
+/* Блок с заявкой */
+.about-form {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  position: relative;
+  background: url('кольцо.jpg') center/cover no-repeat;
+  color: white;
+  padding: 25px;
+  border: 8px solid #fefe00;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Затемнение фона */
+.form-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.775);
+  z-index: 0;
+}
+
+.form-box * {
+  position: relative;
+  z-index: 2;
+}
+
+.form-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.form-box input {
+  width: 85%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  background: white;
+  color: #000;
+  font-size: 14px;
+}
+
+.form-box input::placeholder {
+  color: #444;
+}
+
+.submit-btn {
+  background: #fefe00;
+  color: #000;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #d4d40000;
+}
+
+.phone-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.phone-text span {
+  color: #fefe00;
+  font-weight: bold;
+}
+
+/* Заголовок */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #fefe00;
+  color: #000;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
-    .service-1{
-    margin-top: 0;
-  }
-  .service-1 .service-content {
-    position: relative;
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-  
   }
-  
-  .service-1 .service-content button {
-    margin-top: 10px;
-    padding: 10px 60px;
-   
-    cursor: pointer;
-    position: static; /* убираем абсолют */
-    transform: none; 
-    margin: 20px auto 0 auto;
-  }
-  
-  
-  
-  .service-2 .service-content {
-    position: relative;
-    text-align: center;
-  
-  }
-  
-  .service-2 .service-content button {
-    margin-top: 10px;
-    padding: 10px 60px;
-   
-    cursor: pointer;
-    position: static; /* убираем абсолют */
-    transform: none; 
-    margin: 20px auto 0 auto;
-  }
-  
-  
-  
-  .service-3 .service-content {
-    position: relative;
-    text-align: center;
-  
-  }
-  
-  .service-3 .service-content button {
-    margin-top: 10px;
-    padding: 10px 60px;
-   
-    cursor: pointer;
-    position: static; /* убираем абсолют */
-    transform: none; 
-    margin: 20px auto 0 auto;
-  }
-  
-  .service-4 {
-    position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
-    top: 0; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
-  }
-  
-  .service-4 .service-content {
-    position: relative; /* Родительский контейнер с содержимым */
-    display: inline-block; /* Чтобы контейнер обтекал изображение */
-  }
-  
-  .service-4 .service-content img {
-    width: 100%; /* Изображение будет растягиваться на весь контейнер */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем лишние отступы */
-  }
-  
-  .service-4 .service-content div {
-    position: absolute; /* Позиционируем текст относительно изображения */
-    top: 50%; /* Размещаем текст в центре */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
-    color: white; /* Цвет текста */
-    font-size: 35px; /* Размер шрифта */
-    
-  }
-  
-  
-  .service-4 .service-content button {
-    position: absolute; /* Позиционируем кнопку относительно изображения */
-    top: 60%; /* Размещаем кнопку немного ниже текста */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    padding: 10px 60px;
-    cursor: pointer;
-  }
-  
-  
-  .service-5 {
-    top: -27px; 
-    position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
-  }
-  
-  .service-5 .service-content {
-    position: relative; /* Родительский контейнер с содержимым */
-    display: inline-block; /* Чтобы контейнер обтекал изображение */
-  }
-  
-  .service-5 .service-content img {
-    width: 100%; /* Изображение будет растягиваться на весь контейнер */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем лишние отступы */
-  }
-  
-  .service-5 .service-content div {
-    position: absolute; /* Позиционируем текст относительно изображения */
-    top: 50%; /* Размещаем текст в центре */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
-    color: white; /* Цвет текста */
-    font-size: 30px; /* Размер шрифта */
-  }
-  
-  .service-5 .service-content button {
-    position: absolute; /* Позиционируем кнопку относительно изображения */
-    top: 60%; /* Размещаем кнопку немного ниже текста */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    padding: 10px 60px;
-    cursor: pointer;
-  }
-  .big-text{
-    font-size: 55px;
-  }
-  
-  
-  
-  .service-6 {
-    position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
-    top: -54px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
-    left: 0; 
-  }
-  
-  .service-6 .service-content {
-    position: relative; /* Родительский контейнер с содержимым */
-    display: inline-block; /* Чтобы контейнер обтекал изображение */
-  }
-  
-  .service-6 .service-content img {
-    width: 100%; /* Изображение будет растягиваться на весь контейнер */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем лишние отступы */
-  }
-  
-  .service-6 .service-content div {
-    position: absolute; /* Позиционируем текст относительно изображения */
-    top: 17%; /* Размещаем текст в центре */
-    left: 31%; /* Центрируем по горизонтали */
+  .about-text {
+    flex: unset;
     text-align: left;
-    transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
-    color: white; /* Цвет текста */
-    font-size: 27px; /* Размер шрифта */
+    
+  }
+  .about-form {
+    width: 100%;
+  }
+  
+
+
+  .form-box {
+    max-width: 100%;
+  }
+  
+
+.top-bar {
+  display: flex;
+  justify-content: center; /* Прижимаем кнопки к правому краю */
+  align-items: center; 
+  position: absolute; /* Или relative, если нужно */
+  top: 0; /* Поднимаем вверх */
+  width: 100%;
+  text-transform: lowercase; 
+  padding: 10px 20px;
+  height:150px;
+  background-color: #ffffff;
+
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+
+  background-color: #ffffff;
+}
+
+.contact-info {
+  position: absolute;
+  top: 10px; /* по вертикали отступ от верха */
+  left: 50%;
+  transform: translateX(-50%); /* центр по горизонтали */
+  
+  display: flex;
+
+  flex-direction: column;
+  gap: 5px;
+  background-color: #ffffff;
+}
+
+.phone-btn, .email-btn {
+  text-decoration: none;
+  color: black;
+  left: 30px;
+  
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgb(229, 255, 0);
+
+
+ 
+}
+
+.phone-btn:hover, .email-btn:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px; /* Толщина подчеркивания */
+  text-underline-offset: 1px;
+}
+
+.language-switcher {
+  position: absolute;
+ 
+  left: 50%;
+  transform: translateX(-50%); /* центр по горизонтали */
+  
+  display: flex;
+  flex-direction: column; /* Флаги вертикально */
+  align-items: center;
+  top: 85px;
+ 
+  gap: 5px;
+}
+
+.language-switcher img {
+  width: 25px;
+  margin-bottom: 5px; /* Отступ между флагами */
+  transition: 0.3s;
+
+}
+}
+
+
+.customm {
+  position: relative;
+  width: 100%;
+  background: url('fonnnn.jpg') no-repeat center center / cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.isafety-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 10;
+}
+
+.text-block h1,
+.text-block h2 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.text-block h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-block h2 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.image-block img {
+  width: 450px;
+  height: auto;
+  margin-top: 30px;
+  
+}
+
+.button-block {
+  margin-top: 30px;
+}
+
+.button-block button {
+  background: rgb(235, 255, 15);
+  color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  border: 2px solid rgb(235, 255, 15);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+
+.button-block button:hover {
+  background: transparent;
+  border: 2px solid rgb(235, 255, 15);
+  color: rgb(255, 255, 255);
+}
+.openModal {
+  background: rgb(235, 255, 15);
+  color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  border: 2px solid rgb(235, 255, 15);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+
+.openModal:hover {
+  background: transparent;
+  border: 2px solid rgb(235, 255, 15);
+  color: rgb(255, 255, 255);
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 0;
+  top:0;
+  padding: 20px;
+  max-width: 1200px; /* если хочешь ограничить ширину */
+  margin: 0 auto;     /* центрируем */
+}
+
+
+.advantage {
+  position: absolute;
+  width: calc(33.333% - 20px);
+  min-height: 250px;
+  padding: 20px;
+  padding-top: 0;
+  top: 0%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  background-color: transparent;
+}
+
+.advantage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  z-index: 0;
+}
+
+.advantage {
+  position: relative;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 0%;
+}
+
+.advantage-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.advantage-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.caption1 {
+  background-color: #e7ff2f;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  justify-content: center;
+  height: 60px;
+  display: flex;
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+ 
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+
+.main_title1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .advantage {
+      width: 45%;
     
   }
   
-  
-  .service-6 .service-content button {
-    position: absolute; /* Позиционируем кнопку относительно изображения */
-    top: 30%; /* Размещаем кнопку немного ниже текста */
-    left: 30%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    padding: 10px 60px;
-    cursor: pointer;
+.main_title1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #000;
+}
+}
+@media (max-width: 768px) {
+  .advantage {
+      width: 100%;
+  }
+}
+
+
+
+.custommm .kaknachat {
+  position: relative;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 21);
+
+  background-image: url('Снимок экрана 2025-04-11 080237.png');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+  z-index: 15;
+}
+
+/* Контейнер со всеми шагами */
+.custommm .kaknachat-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 130px;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 205px;
+  bottom: -70px;
+  z-index: 2;
+  text-align: center;
+  color: black;
+}
+
+/* Отдельный шаг */
+.kaknachat-step {
+  max-width: 400px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kaknachat-step div {
+/* больше отступ сверху */
+  text-align: center; /* выравнивание текста влево */
+}
+
+
+/* Общие сбросы */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+.openModal1 {
+  cursor: pointer;
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: #fff; /* начальный цвет — белый */
+  transition: color 0.3s ease;
+}
+
+.openModal1:hover {
+  color: yellow; /* при наведении */
+}
+
+
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
   }
   
-  .service-7 {
-    position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
-    top: -81px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
-    left: 0; 
+
+  header {
+    margin-left: 0;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  h1#title {
+    position: absolute;
+    top: 300px;
+    left: 50%; /* центрируем нормально */
+    transform: translateX(-30%); /* центрируем нормально */
+  
+    max-width: 100%; /* ОГРАНИЧИВАЕМ ширину текста */
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0;
+   
   }
   
-  .service-7 .service-content {
-    position: relative; /* Родительский контейнер с содержимым */
-    display: inline-block; /* Чтобы контейнер обтекал изображение */
-  }
-  
-  .service-7 .service-content img {
-    width: 100%; /* Изображение будет растягиваться на весь контейнер */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем лишние отступы */
-  }
-  
-  .service-7 .service-content div {
-    position: absolute; /* Позиционируем текст относительно изображения */
-    top: 20%; /* Размещаем текст в центре */
-    left: 68%; /* Центрируем по горизонтали */
-    text-align: right;
-    transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
-    color: white; /* Цвет текста */
-    font-size: 27px; /* Размер шрифта */
-    
-  }
-  
-  
-  .service-7 .service-content button {
-    position: absolute; /* Позиционируем кнопку относительно изображения */
-    top: 35%; /* Размещаем кнопку немного ниже текста */
-    margin-top: 15px;
-    left: 70%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    padding: 10px 60px;
-    cursor: pointer;
-  }
-  
-  
-  
-  
-  
-  .service-8 {
-    position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
-    top: -107px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
-    left: 0; 
-  }
-  
-  .service-8 .service-content {
-    position: relative; /* Родительский контейнер с содержимым */
-    display: inline-block; /* Чтобы контейнер обтекал изображение */
-  }
-  
-  .service-8 .service-content img {
-    width: 100%; /* Изображение будет растягиваться на весь контейнер */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем лишние отступы */
-  }
-  
-  .service-8 .service-content div {
-    position: absolute; /* Позиционируем текст относительно изображения */
-    top: 61%; /* Размещаем текст в центре */
-    left: 31%; /* Центрируем по горизонтали */
-    text-align: left;
-    transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
-    color: white; /* Цвет текста */
-    font-size: 27px; /* Размер шрифта */
-    
-  }
-  
-  
-  .service-8 .service-content button {
-    position: absolute; /* Позиционируем кнопку относительно изображения */
-    top: 76%; /* Размещаем кнопку немного ниже текста */
-    left: 30%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    padding: 10px 60px;
-    cursor: pointer;
-  }
-  
-  
-  
-  
-  .service-9 {
-    position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
-    top: -132px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
-    left: 0; 
-    margin-bottom:-152px;
-  }
-  
-  .service-9 .service-content {
-    position: relative; /* Родительский контейнер с содержимым */
-    display: inline-block; /* Чтобы контейнер обтекал изображение */
-  }
-  
-  .service-9 .service-content img {
-    width: 100%; /* Изображение будет растягиваться на весь контейнер */
-    height: auto; /* Сохраняем пропорции изображения */
-    display: block; /* Убираем лишние отступы */
-  }
-  
-  .service-9 .service-content div {
-    position: absolute; /* Позиционируем текст относительно изображения */
-    top: 62%; /* Размещаем текст в центре */
-    left: 76%; /* Центрируем по горизонтали */
-    text-align: right;
-    transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
-    color: white; /* Цвет текста */
-    font-size: 27px; /* Размер шрифта */
-    
-  }
-  
-  
-  .service-9 .service-content button {
-    position: absolute; /* Позиционируем кнопку относительно изображения */
-    top: 75%; /* Размещаем кнопку немного ниже текста */
-    left: 70%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    padding: 10px 60px;
-    cursor: pointer;
-  }
   
 .custommm .kaknachat {
-    background: url('uzb-kaknach.png') no-repeat center center/cover;
-    
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    height:100%;
-    width:100vw;
+  background: url('IMG_6184\ \(2\).PNG') no-repeat center center/cover;
+  
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  height:100%;
+  width:100vw;
+  text-align: center;
+  
+  margin-left: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+  background-size: cover;
+  background-size: contain;
+}
+
+.kaknachat-step div {
+color: #00000000;
+}
+
+
+
+
+
+
+
+  .openModal {
+    background: rgb(235, 255, 15);
+    color: rgb(0, 0, 0);
+    padding: 10px 40px;
+    border: 2px solid rgb(235, 255, 15);
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1900;
+  
+    position: absolute;
+    top: 570px;
+    left: 50%;
+    transform: translateX(-50%); /* <-- Центрируем по горизонтали */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+  
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  .openModal:hover {
+    background: transparent;
+    border: 2px solid rgb(235, 255, 15);
+    color: rgb(255, 255, 255);
+  }
+  
+ 
+
+  
+.service img {
+  width: 100%;
+ 
+
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1150px;
+  margin: auto;
+  
+  position: relative;
+  
+}
+
+.service {
+  background: #ffffff;
+  width: calc(100% - 30px);
+  margin: 15px;
+  box-sizing: border-box;
+  position: static;
+  height: auto;
+}
+
+
+  .service-1,
+  .service-2,
+  .service-3 {
+    margin-bottom: 30px;
+  }
+
+  .service-1.service-content {
+    position: relative;
+  }
+
+
+
+
+.service-content {
+  position: static !important;
+  text-align: center !important;
+  font-size: 20px !important;
+ 
+  bottom: 10px;
+ 
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.big-text {
+  font-size: 35px;
+}
+
+.service-content .caption {
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-size: larger;
+
+}
+
+.service-content {
+  position: relative;
+  text-align: center;
+
+}
+.service-1{
+  margin-top: 0;
+}
+.service-1 .service-content {
+  position: relative;
+  text-align: center;
+
+}
+
+.service-1 .service-content button {
+  margin-top: 10px;
+  padding: 10px 60px;
+  color: #000;
+  cursor: pointer;
+  position: static; /* убираем абсолют */
+  transform: none; 
+  margin: 20px auto 0 auto;
+}
+
+
+
+.service-2 .service-content {
+  position: relative;
+  text-align: center;
+
+}
+
+.service-2 .service-content button {
+  margin-top: 10px;
+  padding: 10px 60px;
+  color: #000;
+  cursor: pointer;
+  position: static; /* убираем абсолют */
+  transform: none; 
+  margin: 20px auto 0 auto;
+}
+
+
+
+.service-3 .service-content {
+  position: relative;
+  text-align: center;
+
+}
+
+.service-3 .service-content button {
+  margin-top: 10px;
+  padding: 10px 60px;
+  color: #000;
+  cursor: pointer;
+  position: static; /* убираем абсолют */
+  transform: none; 
+  margin: 20px auto 0 auto;
+}
+
+.service-4 {
+  position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
+  top: 0; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
+}
+
+.service-4 .service-content {
+  position: relative; /* Родительский контейнер с содержимым */
+  display: inline-block; /* Чтобы контейнер обтекал изображение */
+}
+
+.service-4 .service-content img {
+  width: 100%; /* Изображение будет растягиваться на весь контейнер */
+  height: auto; /* Сохраняем пропорции изображения */
+  display: block; /* Убираем лишние отступы */
+}
+
+.service-4 .service-content div {
+  position: absolute; /* Позиционируем текст относительно изображения */
+  top: 50%; /* Размещаем текст в центре */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
+  color: white; /* Цвет текста */
+  white-space: nowrap;
+  font-size: 33px; /* Размер шрифта */
+  
+}
+
+
+.service-4 .service-content button {
+  position: absolute; /* Позиционируем кнопку относительно изображения */
+  top: 60%; /* Размещаем кнопку немного ниже текста */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+
+.service-5 {
+  top: -27px; 
+  position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
+}
+
+.service-5 .service-content {
+  position: relative; /* Родительский контейнер с содержимым */
+  display: inline-block; /* Чтобы контейнер обтекал изображение */
+}
+
+.service-5 .service-content img {
+  width: 100%; /* Изображение будет растягиваться на весь контейнер */
+  height: auto; /* Сохраняем пропорции изображения */
+  display: block; /* Убираем лишние отступы */
+}
+
+.service-5 .service-content div {
+  position: absolute; /* Позиционируем текст относительно изображения */
+  top: 50%; /* Размещаем текст в центре */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
+  color: white; /* Цвет текста */
+  font-size: 30px; /* Размер шрифта */
+}
+
+.service-5 .service-content button {
+  position: absolute; /* Позиционируем кнопку относительно изображения */
+  top: 60%; /* Размещаем кнопку немного ниже текста */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+  padding: 10px 60px;
+  cursor: pointer;
+}
+.big-text{
+  font-size: 55px;
+}
+
+
+
+.service-6 {
+  position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
+  top: -54px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
+  left: 0; 
+}
+
+.service-6 .service-content {
+  position: relative; /* Родительский контейнер с содержимым */
+  display: inline-block; /* Чтобы контейнер обтекал изображение */
+}
+
+.service-6 .service-content img {
+  width: 100%; /* Изображение будет растягиваться на весь контейнер */
+  height: auto; /* Сохраняем пропорции изображения */
+  display: block; /* Убираем лишние отступы */
+}
+
+.service-6 .service-content div {
+  position: absolute; /* Позиционируем текст относительно изображения */
+  top: 16%; /* Размещаем текст в центре */
+  left: 32%; /* Центрируем по горизонтали */
+  text-align: left;
+  transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
+  color: white; /* Цвет текста */
+  font-size: 27px; /* Размер шрифта */
+  
+}
+
+
+.service-6 .service-content button {
+  position: absolute; /* Позиционируем кнопку относительно изображения */
+  top: 30%; /* Размещаем кнопку немного ниже текста */
+  left: 31%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+.service-7 {
+  position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
+  top: -81px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
+  left: 0; 
+}
+
+.service-7 .service-content {
+  position: relative; /* Родительский контейнер с содержимым */
+  display: inline-block; /* Чтобы контейнер обтекал изображение */
+}
+
+.service-7 .service-content img {
+  width: 100%; /* Изображение будет растягиваться на весь контейнер */
+  height: auto; /* Сохраняем пропорции изображения */
+  display: block; /* Убираем лишние отступы */
+}
+
+.service-7 .service-content div {
+  position: absolute; /* Позиционируем текст относительно изображения */
+  top: 22%; /* Размещаем текст в центре */
+  left: 67%; /* Центрируем по горизонтали */
+  text-align: right;
+ 
+  color: white; /* Цвет текста */
+  font-size: 27px; /* Размер шрифта */
+  
+}
+
+
+.service-7 .service-content button {
+  position: absolute; /* Позиционируем кнопку относительно изображения */
+  top: 40%; /* Размещаем кнопку немного ниже текста */
+  left: 69%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+
+
+
+
+.service-8 {
+  position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
+  top: -107px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
+  left: 0; 
+}
+
+.service-8 .service-content {
+  position: relative; /* Родительский контейнер с содержимым */
+  display: inline-block; /* Чтобы контейнер обтекал изображение */
+}
+
+.service-8 .service-content img {
+  width: 100%; /* Изображение будет растягиваться на весь контейнер */
+  height: auto; /* Сохраняем пропорции изображения */
+  display: block; /* Убираем лишние отступы */
+}
+
+.service-8 .service-content div {
+  position: absolute; /* Позиционируем текст относительно изображения */
+  top: 64%; /* Размещаем текст в центре */
+  left: 31%; /* Центрируем по горизонтали */
+  text-align: left;
+  transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
+  color: white; /* Цвет текста */
+  font-size: 27px; /* Размер шрифта */
+  
+}
+
+
+.service-8 .service-content button {
+  position: absolute; /* Позиционируем кнопку относительно изображения */
+  top: 76%; /* Размещаем кнопку немного ниже текста */
+  left: 30%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+
+
+
+.service-9 {
+  position: relative; /* Важно, чтобы родительский контейнер имел position: relative */
+  top: -132px; /* Смещаем фрагмент выше на 50px, подберите нужное значение */
+  left: 0; 
+  margin-bottom:-152px;
+}
+
+.service-9 .service-content {
+  position: relative; /* Родительский контейнер с содержимым */
+  display: inline-block; /* Чтобы контейнер обтекал изображение */
+}
+
+.service-9 .service-content img {
+  width: 100%; /* Изображение будет растягиваться на весь контейнер */
+  height: auto; /* Сохраняем пропорции изображения */
+  display: block; /* Убираем лишние отступы */
+}
+
+.service-9 .service-content div {
+  position: absolute; /* Позиционируем текст относительно изображения */
+  top: 62%; /* Размещаем текст в центре */
+  left: 76%; /* Центрируем по горизонтали */
+  text-align: right;
+  transform: translate(-50%, -50%); /* Корректируем для точного центрирования */
+  color: white; /* Цвет текста */
+  font-size: 27px; /* Размер шрифта */
+  
+}
+
+
+.service-9 .service-content button {
+  position: absolute; /* Позиционируем кнопку относительно изображения */
+  top: 76%; /* Размещаем кнопку немного ниже текста */
+  left: 69%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+  padding: 10px 60px;
+  cursor: pointer;
+}
+.index::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 709px; /* 100% высоты экрана */
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('pic1.jpg');
+ background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* фон приклеен к блоку */
+  z-index: -1;
+  background-size: cover;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+ 
+
+
+.button-image {
+  width: 115px; /* Размер кнопки */
+  height: auto;
+ 
+  position:absolute;
+  cursor: pointer;
+
+  
+  right:0;
+  top:691px;
+  
+
+  z-index: 999;
+}
+  .logo {
+    position: absolute;
+    left: 20px;
+    top:150px;
+    width: 120px;
+    margin: 0 auto;
+    display: block;
+  }
+  .openModal1 {
+    cursor: pointer;
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: #fff; /* начальный цвет — белый */
+    transition: color 0.3s ease;
+  }
+
+  .openModal1:hover {
+    color: yellow; /* при наведении */
+  }
+  
+
+  .yellow-bar {
+    position: absolute;
+    top: 260px;
+   
+  }
+
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5px;
+    right: 0;
+  }
+
+  .language-switcher {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .customm {
+    position: relative;
+    height: 400px;
+    display: flex;
+    top:-100px;
+    flex-direction: column;
+    padding: 30px 10px;
+    text-align: center;
+    margin-bottom: -70px;
+  }
+ .custom {
+  position: relative;
+}
+
+.container {
+  position: relative;  /* Родительский контейнер с position: relative */
+}
+
+  
+
+.customm {
+  position: relative;
+  height: 400px;
+  display: flex;
+  top: -100px;
+  flex-direction: column;
+  padding: 30px 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.isafety-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 10;
+}
+
+.image-block img {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.button-block {
+  margin-top: 30px;
+  z-index: 20; /* Убедитесь, что кнопка находится поверх других элементов */
+}
+
+
+.button-block button {
+  background: rgb(235, 255, 15);
+  color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  border: 2px solid rgb(235, 255, 15);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+
+.button-block button:hover {
+  background: transparent;
+  border: 2px solid rgb(235, 255, 15);
+  color: rgb(255, 255, 255);
+}
+.customm {
+  position: relative;
+  height: 400px;
+  display: flex;
+  top: -100px;
+  flex-direction: column;
+  padding: 30px 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.isafety-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 10;
+}
+
+.image-block img {
+  width: 90%;
+  margin-top: 20px;
+}
+
+
+  
+
+  .text-block h1 {
+    font-size: 20px;
+  }
+
+  .text-block h2 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+ 
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .about-text,
+  .about-form,
+  .form-box {
+    width: 100%;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     
-    margin-left: 5px;
-    margin-right: 5px;
-    object-fit: cover;
-    background-size: cover;
-    background-size: contain;
-  }
+    /* Центровка содержимого */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
   
-  .kaknachat-step div {
-  color: #00000000;
-  }
-  
-  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    
+    position: fixed;
+    z-index: 1000000;
+}
+
+
   .custommm .kaknachat-content {
     position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+
+  /* Кнопки WhatsApp и звонка */
+  .fixed-buttons {
+    position: fixed;
+    bottom: 45px;
+    left: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+
+  .fixed-buttons a {
+    pointer-events: auto;
+    background-color: #e4ff00;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .fixed-buttons a:hover {
+    transform: scale(1.1);
+  }
+
+  .fixed-buttons img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .fixed-buttons {
+    display: none !important;
+  }
+  .fixed-buttons a {
+    display: none !important;
+  }
+}
+
+
+/* Только для телефонов (макс ширина 768px) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* предотвращает горизонтальную прокрутку */
+  }
+  
+  .menu-toggle {
+    position: absolute;
+    top: 130px;
+    right: 40px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1001;
+    color: #f1ff00;
+  }
+  
+  .menu-wrapper {
+    position: relative;
+    min-height: calc(var(--vh, 1vh) * 50);
+
+  }
+  
+  .side-menu {
+    position: absolute;
+    top: 100px;
+    right: -250px; /* скрыто за пределами */
+    width: 250px;
+    height: calc(var(--vh, 1vh) * 100);
+
+    color: white;
+    padding-top: 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .side-menu li {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .side-menu a:hover {
+    color: #f1ff00;
+  }
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  h1#title,
+  .openModal {
+    transform: translate(-50%, 0);
+    transition: transform 0.3s ease;
+  }
+  h1#title.shifted,
+.openModal.shifted {
+  transform: translate(-50%, 40px); /* или сколько тебе нужно */
+}
+  
+  
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none !important;
+  }
+  .side-menu {
+    display: none !important;
   }
 }
